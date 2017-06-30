@@ -1,0 +1,14 @@
+<h2>Play List</h2>
+<ul class="movies">
+  <li *ngFor="let play of plays"
+    [class.selected]="play === selectedPlay"
+    (click)="onSelect(play)">
+    <span class="badge">{{play.id}}</span> {{play.name}}
+  </li>
+</ul>
+<div *ngIf="selectedPlay">
+  <h2>
+    {{selectedPlay.name | uppercase}} is my fav play
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
