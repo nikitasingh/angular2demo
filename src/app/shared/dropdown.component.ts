@@ -7,15 +7,6 @@ import { Component, Input } from '@angular/core';
     templateUrl: './dropdown.component.html',
 })
 export class DropdownComponent {
-   movies: Movie[];
-   constructor(private movieService: MovieService) {} ;
-
-  getMovies(): void {
-      this.movieService.getMovies().then(movies => this.movies = movies);
-    }
-
-  ngOnInit(): void {
-      this.getMovies();
-  }
-
+	 @Input()
+    movies: Movie[];
 }

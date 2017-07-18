@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { count } from 'rxjs/operator/count';
+import { MovieService } from './movie.service';
+import { Movie } from './movie'
 
 //@Component is an annotation that tells Angular, that the class, which the annotation is attached to, is a component.
 @Component({
@@ -13,12 +15,22 @@ import { count } from 'rxjs/operator/count';
     </nav>
     <div myHidden>Hello</div>
     <router-outlet></router-outlet>
-    <app-custom-dropdown></app-custom-dropdown>
+    <app-custom-dropdown [movies] = "movies"></app-custom-dropdown>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Movies list';
   val = false;
-  initialData = [2, 3, 3, 4];
+  movies: Movie[];
+
+  constructor(private movieService: MovieService) {} ;
+
+  getMovies(): void {
+      this.movieService.getMovies().then(movies => this.movies = movies);
+    }
+
+  ngOnInit(): void {
+      this.getMovies();
+  }
 }
