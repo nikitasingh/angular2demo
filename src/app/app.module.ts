@@ -1,21 +1,24 @@
+import { DropdownComponent } from './shared/dropdown.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-import { RouterModule }   from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MovieDetailComponent } from './movie-detail.component';
-import { MoviesComponent }     from './movies.component';
-import { PlaysComponent }     from './plays/plays.component';
-import { DashboardComponent }     from './dashboard.component';
-import { MovieService }     from './movie.service';
-import { PlayService }     from './plays/play.service';
-import { PlayDetailComponent }     from './plays/play-detail.component';
+import { MoviesComponent } from './movies.component';
+import { PlaysComponent } from './plays/plays.component';
+import { DashboardComponent } from './dashboard.component';
+import { MovieService } from './movie.service';
+import { PlayService } from './plays/play.service';
+import { PlayDetailComponent } from './plays/play-detail.component';
 
-import { AppRoutingModule }     from './app-routing.module';
-import { SharedModule }     from './shared/shared.module';
+
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 //A component must belong to an NgModule in order for it to be usable by another component or application. To specify that a //component is a member of an NgModule, you should list it in the declarations field of that NgModule.
+
 //NgModules help organize an application into cohesive blocks of functionality.
 
 @NgModule({
@@ -27,7 +30,8 @@ import { SharedModule }     from './shared/shared.module';
     PlaysComponent,
     MovieDetailComponent,
     DashboardComponent,
-    PlayDetailComponent
+    PlayDetailComponent,
+    DropdownComponent
   ],
   //Add a module to the imports array when the application requires its features.
   //Only NgModule classes go in the imports array. Do not put any other kind of class in imports.

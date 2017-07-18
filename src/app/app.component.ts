@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { count } from 'rxjs/operator/count';
 
 //@Component is an annotation that tells Angular, that the class, which the annotation is attached to, is a component.
 @Component({
@@ -11,10 +13,12 @@ import { Component } from '@angular/core';
     </nav>
     <div myHidden>Hello</div>
     <router-outlet></router-outlet>
+    <app-custom-dropdown></app-custom-dropdown>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Movies list';
   val = false;
+  initialData = [2, 3, 3, 4];
 }

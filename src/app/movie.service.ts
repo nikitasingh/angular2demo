@@ -10,6 +10,7 @@ export class MovieService {
   }
 
   getMovie(id: number): Promise<Movie> {
+    console.log("hell");
     return this.getMovies()
                .then(movies => movies.find(movie => movie.id === id));
   }
