@@ -1,8 +1,11 @@
+import { TreeNode, TreeModule } from 'primeng/primeng';
+import { SharedModule } from './shared/shared.module';
 import { DropdownComponent } from './shared/dropdown.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MovieDetailComponent } from './movie-detail.component';
@@ -15,7 +18,8 @@ import { PlayDetailComponent } from './plays/play-detail.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
+import { NodeService } from './node-service.component';
+import { TreeViewComponent } from './shared/tree-view.component';
 
 //A component must belong to an NgModule in order for it to be usable by another component or application. To specify that a //component is a member of an NgModule, you should list it in the declarations field of that NgModule.
 
@@ -31,7 +35,8 @@ import { SharedModule } from './shared/shared.module';
     MovieDetailComponent,
     DashboardComponent,
     PlayDetailComponent,
-    DropdownComponent
+    DropdownComponent,
+    TreeViewComponent
   ],
   //Add a module to the imports array when the application requires its features.
   //Only NgModule classes go in the imports array. Do not put any other kind of class in imports.
@@ -39,9 +44,11 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpModule,
+    TreeModule
   ],
-  providers: [MovieService, PlayService],
+  providers: [MovieService, PlayService, NodeService],
   //the root component that Angular creates and inserts into the index.html host web page.
   // Among other things, the bootstrapping process creates the component(s) listed in the bootstrap array and inserts each //one into the browser DOM.
   bootstrap: [AppComponent]

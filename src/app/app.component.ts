@@ -16,6 +16,7 @@ import { Movie } from './movie'
     <div myHidden>Hello</div>
     <router-outlet></router-outlet>
     <app-custom-dropdown [movies] = "movies"></app-custom-dropdown>
+    <app-tree-view></app-tree-view>
   `,
   styleUrls: ['./app.component.css']
 })
