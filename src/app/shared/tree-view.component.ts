@@ -1,7 +1,7 @@
 import { NodeService } from './../node-service.component';
 import { templateSourceUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { TreeModule, TreeNode } from 'primeng/primeng';
+// import { TreeModule, TreeNode } from 'primeng/primeng';
 import { selector } from 'rxjs/operator/publish';
 import * as wjcNav from 'wijmo/wijmo.nav';
 
