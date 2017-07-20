@@ -1,4 +1,9 @@
 import { TreeNode, TreeModule } from 'primeng/primeng';
+import { WjGridModule } from 'wijmo/wijmo.angular2.grid';
+import * as wjcCore from 'wijmo/wijmo';
+import * as wjcNav from 'wijmo/wijmo.nav';
+import { WjNavModule } from 'wijmo/wijmo.angular2.nav';
+
 import { SharedModule } from './shared/shared.module';
 import { DropdownComponent } from './shared/dropdown.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -46,7 +51,8 @@ import { TreeViewComponent } from './shared/tree-view.component';
     AppRoutingModule,
     SharedModule,
     HttpModule,
-    TreeModule
+    TreeModule,
+    WjNavModule
   ],
   providers: [MovieService, PlayService, NodeService],
   //the root component that Angular creates and inserts into the index.html host web page.
