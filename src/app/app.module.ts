@@ -22,7 +22,6 @@ import { PlayDetailComponent } from './plays/play-detail.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import { NodeService } from './node-service.component';
 import { TreeViewComponent } from './shared/tree-view.component';
 
 //A component must belong to an NgModule in order for it to be usable by another component or application. To specify that a //component is a member of an NgModule, you should list it in the declarations field of that NgModule.
@@ -52,7 +51,7 @@ import { TreeViewComponent } from './shared/tree-view.component';
     HttpModule,
     WjNavModule
   ],
-  providers: [MovieService, PlayService, NodeService],
+  providers: [MovieService, PlayService],
   //the root component that Angular creates and inserts into the index.html host web page.
   // Among other things, the bootstrapping process creates the component(s) listed in the bootstrap array and inserts each //one into the browser DOM.
   bootstrap: [AppComponent]
