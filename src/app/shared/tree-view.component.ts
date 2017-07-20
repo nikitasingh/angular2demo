@@ -13,8 +13,6 @@ import * as wjcNav from 'wijmo/wijmo.nav';
   // "./../../../node_modules/primeng/resources/themes/omega/theme.css"]
 })
 export class TreeViewComponent implements OnInit {
-  files: TreeNode[];
-  selectedFiles: TreeNode[];
   items = [];
   navItem = '';
 
