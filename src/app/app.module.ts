@@ -1,4 +1,3 @@
-import { TreeNode, TreeModule } from 'primeng/primeng';
 import { WjGridModule } from 'wijmo/wijmo.angular2.grid';
 import * as wjcCore from 'wijmo/wijmo';
 import * as wjcNav from 'wijmo/wijmo.nav';
@@ -51,7 +50,6 @@ import { TreeViewComponent } from './shared/tree-view.component';
     AppRoutingModule,
     SharedModule,
     HttpModule,
-    TreeModule,
     WjNavModule
   ],
   providers: [MovieService, PlayService, NodeService],
