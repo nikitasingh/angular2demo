@@ -1,4 +1,4 @@
-import { NodeService } from './../node-service.component';
+// import { NodeService } from './../node-service.component';
 import { templateSourceUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 // import { TreeModule, TreeNode } from 'primeng/primeng';
@@ -20,7 +20,7 @@ export class TreeViewComponent implements OnInit {
         this.navItem = 'Navigating to *** ' + treeView.selectedItem.header + ' ***';
     }
 
-  constructor(private nodeService: NodeService) {}
+  constructor() {}
   ngOnInit() {
       // this.nodeService.getFiles().then(files => this.files = files);
       this.items = [
